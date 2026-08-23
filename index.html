@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My First Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: lightblue;
+            padding-top: 20px;
+        }
+
+        h1 {
+            color: darkblue;
+            font-size: 40px;
+        }
+
+        p {
+            font-size: 20px;
+        }
+
+        button {
+            background-color: darkblue;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            cursor: pointer;
+        }nav {
+    background-color: darkblue;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background-color: white;
+    color: darkblue;
+}
+#gallery img:hover {
+    transform: scale(1.05);
+}
+section {
+    background-color: white;
+    padding: 30px;
+    margin: 30px auto;
+    max-width: 700px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px gray;
+}
+
+section ul {
+    text-align: left;
+    max-width: 500px;
+    margin: 15px auto;
+}
+
+section li {
+    margin: 8px 0;
+}
+
+#gallery img {
+    border-radius: 15px;
+    box-shadow: 0 4px 15px gray;
+    transition: 0.3s;
+}
+
+#gallery img:hover {
+    transform: scale(1.05);
+}
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 120px);
+    gap: 20px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 120px);
+    gap: 20px;
+    justify-content: center;
+}
+
+.gallery-grid .gallery-item img {
+    display: block;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+section h2 {
+    color: darkblue;
+    font-size: 30px;
+}
+.profile-pic {
+    width: 130px;
+height: 130px;
+object-fit: cover;
+border-radius: 50%;
+border: 4px solid white;
+box-shadow: 0 4px 15px gray;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-image {
+    width: auto;
+    height: auto;
+    max-width: 70%;
+    max-height: 70%;
+    object-fit: contain;
+    border-radius: 15px;
+}
+
+   .close {
+    position: fixed;
+    top: 20px;
+    right: 25px;
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 45px;
+    cursor: pointer;
+    z-index: 1001;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-image {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 15px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1001;
+}
+.whatsapp-button {
+    display: inline-block;
+    background-color: #25D366;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.hero {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #0f172a, #1d4ed8, #2563eb);
+    color: white;
+}
+
+.hero img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 5px solid white;
+    box-shadow: 0 4px 15px gray;
+}
+.hero h1 {
+    font-size: 42px;
+    margin: 15px 0 5px;
+    color: white;
+    text-shadow: 2px 2px 5px #000;
+    font-weight: bold;
+}
+.hero p {
+    font-size: 18px;
+}
+/* Mobile friendly */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .hero {
+        padding: 25px 10px;
+    }
+
+    .hero img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    nav a {
+        display: block;
+        margin: 8px 0;
+    }
+
+    section {
+        padding: 20px 15px;
+        margin: 15px 5px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+
+</head>
+
+<body>
+<header class="hero">
+    <img src="picture1.png" alt="Joseph's Profile Photo">
+    <h1>Joseph Ombato</h1>
+    <p>Welcome to my personal website</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About Me</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+
+<section id="home">
+    <h1>Welcome to Joseph's Website</h1>
+    <p>Welcome! This is my personal website where you can learn more about me, my interests and my work.</p>
+</section>
+
+<section id="about">
+    <h2>About Me</h2>
+
+    <p>
+        My name is Joseph Ombato. Welcome to my personal website.
+        This website gives you an opportunity to learn more about me,
+        my interests, my work, and the things I enjoy.
+    </p>
+
+    <p>
+        I am passionate about learning new skills, technology,
+        community development, and using technology to make a positive
+        difference in people's lives.
+    </p>
+
+    <h3>My Interests</h3>
+
+    <ul>
+        <li>Technology and computers</li>
+        <li>Website development</li>
+        <li>Community development</li>
+        <li>Church and community activities</li>
+        <li>Learning new skills</li>
+    </ul>
+</section></section>
+
+<section id="gallery">
+    <h2>My Gallery</h2>
+    <p>Here are some of my favorite pictures.</p>
+
+    <div class="gallery-grid">
+      
+<div class="gallery-item">
+    <img src="picture1.png" alt="Joseph" onclick="openImage(this)">
+    <p>My Photo</p>
+</div>
+
+<div class="gallery-item">
+    <img src="picture2.jpg" alt="Joseph" onclick="openImage(this)">
+    <p>With My Daughter</p>
+</div>
+
+<div class="gallery-item">
+    <img src="picture3.jpg" alt="Joseph and daughter" onclick="openImage(this)">
+    <p>A Special Moment</p>
+</div>
+
+
+
+<div class="gallery-item">
+    <img src="picture4.jpg" alt="Family" onclick="openImage(this)">
+    <p>My Family</p>
+</div>
+<button onclick="alert('Thank you for visiting my website!')">Click Me</button>
+
+<div id="imageModal" class="modal">
+    <span class="close" onclick="closeImage()">&times;</span>
+    <img id="largeImage" class="modal-image">
+</div>
+<script>
+function openImage(image) {
+    document.getElementById("imageModal").style.display = "flex";
+    document.getElementById("largeImage").src = image.src;
+}
+
+function closeImage() {
+    document.getElementById("imageModal").style.display = "none";
+}
+</script>
+<section id="contact">
+    <h2>Contact Me</h2>
+    <p>Phone: <a href="tel:0793790791">0793790791</a></p>
+<p>Email: <a href="mailto:ombatojosepj@email.com">ombatojoseph@email.com</a></p><p>📍 Location: Kenya</p>
+<p>
+    <a class="whatsapp-button" href="https://wa.me/254793790791?text=Hello%20Joseph%2C%20I%20found%20your%20website%20and%20would%20like%20to%20contact%20you." target="_blank">💬 Chat with me on WhatsApp</a>
+</p><p>
+    <a href="https://www.facebook.com/" target="_blank">📘 Follow me on Facebook</a>
+</p>
+
+</section>
+<footer>
+    <p>© 2026 Joseph. All Rights Reserved.</p>
+</footer>
+</body>
+</html>
