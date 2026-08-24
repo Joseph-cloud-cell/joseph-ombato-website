@@ -139,17 +139,25 @@ nav a:hover {
     box-sizing: border-box;
 }
 }
-section ul {
-    display: inline-block;
-    text-align: left;
-    list-style-position: inside;
-    padding-left: 0;
+#about ul {
+    list-style: none;
+    width: fit-content;
     margin: 15px auto;
+    padding: 0;
+    text-align: left;
 }
 
-section li {
+#about li {
+    position: relative;
     margin: 8px 0;
-    padding-left: 0;
+    padding-left: 20px;
+    text-align: left;
+}
+
+#about li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
 }
 
 section li {
