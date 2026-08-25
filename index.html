@@ -317,7 +317,37 @@ box-shadow: 0 4px 15px gray;
     margin: 30px auto !important;
     box-sizing: border-box;
 }
+#projects {
+    text-align: center;
+    margin: 40px auto;
+    width: 90%;
+    max-width: 900px;
+}
 
+#projects h2 {
+    color: darkblue;
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+.project {
+    background-color: white;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px gray;
+    max-width: 700px;
+}
+
+.project h3 {
+    color: darkblue;
+    margin-bottom: 10px;
+}
+
+.project p {
+    font-size: 16px;
+    line-height: 1.6;
+}
 footer {
     clear: both !important;
     float: none !important;
@@ -469,7 +499,25 @@ function closeImage() {
     document.getElementById("imageModal").style.display = "none";
 }
 </script>
-<section id="contact">
+<section id="projects">
+    <h2>My Projects</h2>
+
+    <div class="project">
+        <h3>My Personal Website</h3>
+        <p>I created this website to learn web development, showcase my interests, and share more about myself.</p>
+    </div>
+
+    <div class="project">
+        <h3>Community Development</h3>
+        <p>I am interested in using technology and community activities to make a positive difference in people's lives.</p>
+    </div>
+
+    <div class="project">
+        <h3>Learning Technology</h3>
+        <p>I continue learning about computers, website development, streaming, and other useful technology skills.</p>
+    </div>
+</section>
+    <section id="contact">
     <h2>Contact Me</h2>
    <p>Phone: <a href="tel:0793790791">0793790791</a></p>
 
